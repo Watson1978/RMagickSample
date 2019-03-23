@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
 
-Dir.glob('*.rb') do |file|
-  puts "** #{file}"
-  system "ruby -v #{file}"
-end
+require 'rmagick'
+puts Magick::Long_version
