@@ -2,3 +2,9 @@
 
 require 'rmagick'
 puts Magick::Long_version
+puts RUBY_VERSION
+
+Dir.glob('*.rb') do |file|
+  puts "** #{file} **"
+  `ruby #{file}`
+end
