@@ -1,7 +1,8 @@
 require 'rmagick'
 
-image = Magick::ImageList.new('./Flower_Hat.jpg')
-source = Magick::ImageList.new('./compose_mask_source.gif').first
-mask = Magick::ImageList.new('./compose_mask.gif').first
+image = Magick::ImageList.new
+image.new_image(200, 200, Magick::SolidFill.new('red'))
+image.new_image(200, 200, Magick::SolidFill.new('blue'))
+image.new_image(200, 200, Magick::SolidFill.new('green'))
 
 image.combine(Magick::CMYKColorspace).write('./result/combine.png')
