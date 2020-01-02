@@ -4,7 +4,15 @@ require 'rmagick'
 puts Magick::Long_version
 puts RUBY_VERSION
 
-Dir.glob('*.rb') do |file|
+Dir.glob('*.rb').to_a.sort.each do |file|
+  next if file == "util.rb"
   puts "** #{file} **"
-  `ruby #{file}`
+  load "./#{file}"
 end
+
+
+
+
+
+
+
