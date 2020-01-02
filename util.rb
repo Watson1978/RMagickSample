@@ -1,4 +1,5 @@
 require 'rmagick'
+require 'rvg/rvg'
 require 'fileutils'
 
 class Magick::ImageList
@@ -18,12 +19,3 @@ class Magick::Image
     self.original_write(File.join("result-#{version}", file))
   end
 end
-
-
-
-
-
-
-
-
-
