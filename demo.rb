@@ -318,5 +318,3 @@ begin
 rescue StandardError
   puts "Caught exception: #{$ERROR_INFO}"
 end
-
-exit
