@@ -1,5 +1,5 @@
-require 'benchmark/ips'
-require 'rmagick'
+require_relative 'util'
+require_relative 'util'
 
 puts Magick::Version
 

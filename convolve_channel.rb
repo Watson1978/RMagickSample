@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
 kernel = [
@@ -6,4 +6,4 @@ kernel = [
   -1,  8, -1,
   -1, -1, -1,
 ]
-image.convolve_channel(3, kernel, Magick::BlueChannel).write('./result/convolve_channel.png')
+image.convolve_channel(3, kernel, Magick::BlueChannel).write('convolve_channel.png')

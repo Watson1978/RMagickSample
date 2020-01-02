@@ -1,9 +1,7 @@
-require 'rmagick'
+require_relative 'util'
 
-# Create a transparent image to tile over the background image.
 wm = Magick::Image.read("xc:none") { self.size = "100x50" }.first
 
-# Draw "RMagick" in semi-transparent text on the transparent image.
 gc = Magick::Draw.new
 gc.fill '#ff0000'
 gc.font_weight Magick::BoldWeight
@@ -13,7 +11,5 @@ gc.gravity Magick::CenterGravity
 gc.text 0, 0, "RMagick"
 gc.draw wm
 
-# Read the background image.
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
-
-image.composite_tiled(wm).write('./result/composite_tiled.png')
+image.composite_tiled(wm).write('composite_tiled.png')

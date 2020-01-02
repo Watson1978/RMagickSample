@@ -1,7 +1,4 @@
-#!/usr/bin/env ruby -w
-# RMagick version of ImageMagick's "smile.c" example program.
-
-require 'rmagick'
+require_relative 'util'
 include Magick
 
 SmileWidth = 48
@@ -121,4 +118,4 @@ SmileHeight.times do |y|                # Store pixels a row at a time
   img.store_pixels(0, y, SmileWidth, 1, q)
 end
 
-img.write('result/store_pixels.png')
+img.write('store_pixels.png')

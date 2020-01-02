@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
 target = image.pixel_color(100, 200)
@@ -9,4 +9,4 @@ image.rows do |y|
   end
 end
 
-image.write('./result/matte_flood_fill.png')
+image.write('matte_flood_fill.png')

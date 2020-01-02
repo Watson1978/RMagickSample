@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
-image.tint('red', 0.5, 2.0, 0.8, 1.0).write('./result/tint.png')
+image.tint('red', 0.5, 2.0, 0.8, 1.0).write('tint.png')

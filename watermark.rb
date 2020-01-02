@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 # Create a transparent image to tile over the background image.
 wm = Magick::Image.read("xc:none") { self.size = "100x50" }.first
@@ -16,4 +16,4 @@ gc.draw wm
 # Read the background image.
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
 
-image.watermark(wm).write('./result/watermark.png')
+image.watermark(wm).write('watermark.png')

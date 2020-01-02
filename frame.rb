@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg')
-image.frame().write('./result/frame.png')
+image.frame().write('frame.png')

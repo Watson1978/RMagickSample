@@ -1,5 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
-
-image.black_threshold(100, 20, 0).write('./result/black_threshold.png')
+image.black_threshold(100, 20, 0).write('black_threshold.png')

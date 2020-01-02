@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
-image.implode().write('./result/implode.png')
+image.implode().write('implode.png')

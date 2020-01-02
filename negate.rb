@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
-image.negate(true).write('./result/negate.png')
+image.negate(true).write('negate.png')

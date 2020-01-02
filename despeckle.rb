@@ -1,5 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
-
-image.despeckle().write('./result/despeckle.png')
+image.despeckle().write('despeckle.png')

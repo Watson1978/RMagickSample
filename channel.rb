@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
-image.channel(Magick::BlueChannel).write('./result/channel.png')
+image.channel(Magick::BlueChannel).write('channel.png')

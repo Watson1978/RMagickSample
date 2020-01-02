@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg')
-image.border(5, 5, "#BDBDBD").write('./result/border.png')
+image.border(5, 5, "#BDBDBD").write('border.png')

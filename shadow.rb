@@ -1,4 +1,4 @@
-require 'rmagick'
+require_relative 'util'
 
 image = Magick::ImageList.new('./Flower_Hat.jpg').first
-image.shadow().write('./result/shadow.png')
+image.shadow().write('shadow.png')
