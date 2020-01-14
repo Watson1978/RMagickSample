@@ -1,6 +1,9 @@
 require_relative 'util'
 
-images = Magick::ImageList.new('images/Button_A.gif', 'images/Button_B.gif', 'images/Button_C.gif')
+images = Magick::ImageList.new('./Flower_Hat.jpg')
 
-group = images.quantize(8, Magick::RGBColorspace, Magick::FloydSteinbergDitherMethod, 32, true)
-group.write 'list_quantize.png'
+group = images.quantize(16, Magick::RGBColorspace, true)
+group.write 'list_quantize_dither_on.png'
+
+group = images.quantize(16, Magick::RGBColorspace, false)
+group.write 'list_quantize_dither_off.png'
